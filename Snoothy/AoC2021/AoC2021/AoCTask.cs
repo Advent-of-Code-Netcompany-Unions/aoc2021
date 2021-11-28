@@ -16,9 +16,9 @@ namespace AoC2021
         
         public void RunChallenge()
         {
-            var lines = ReadLines();
             Console.WriteLine();
             Console.WriteLine($"--- {filename} ---");
+            var lines = ReadLines();
             Console.WriteLine($"part 1: {RunPart1(lines)}");
             Console.WriteLine($"part 2: {RunPart2(lines)}");
         }
@@ -26,9 +26,15 @@ namespace AoC2021
         public abstract string RunPart1(List<string> lines);
         public abstract string RunPart2(List<string> lines);
 
+        // Reads lines from file and returns them as a list
         private List<string> ReadLines()
         {
-            return new List<string>();
+            try {
+                return System.IO.File.ReadAllLines($"../ChallengeInput/{filename}.txt").ToList();
+            } catch (Exception e) {
+                Console.WriteLine($"Error reading file {filename}: {e.Message}");
+                return new List<string>();
+            }
         }
     }
 }
