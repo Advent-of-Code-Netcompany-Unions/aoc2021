@@ -36,5 +36,13 @@ namespace AoC2021
                 return new List<string>();
             }
         }
+
+        public List<int> convertListToInteger(List<string> list){
+            List<int> newList = new List<int>();
+            foreach(string s in list){
+                newList.Add(Convert.ToInt32(s));
+            }
+            return newList;
+        }
     }
 }
