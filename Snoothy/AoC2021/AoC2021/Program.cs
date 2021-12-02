@@ -6,5 +6,6 @@ Console.WriteLine("Advent of Code 2021");
 var challenges = new List<AoCTask>();
 
 challenges.Add(new AoCTask01("AoC01"));
+challenges.Add(new AoCTask02("AoC02"));
 
 challenges.ForEach(challenge => challenge.RunChallenge());
