@@ -46,5 +46,6 @@ namespace AoC2021.Model
             int units = int.Parse(split[1]);
             Move(direction, units);
         }
+        
     }
 }
